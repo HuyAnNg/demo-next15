@@ -1,4 +1,5 @@
 import LocaleProvider from '@/components/providers/locale-provider'
+import ReactQueryProvider from '@/components/providers/react-query-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -32,16 +33,18 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LocaleProvider locale={locale}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </LocaleProvider>
+        <ReactQueryProvider>
+          <LocaleProvider locale={locale}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+          </LocaleProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   )
