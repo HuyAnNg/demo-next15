@@ -1,6 +1,7 @@
 import LocaleProvider from '@/components/providers/locale-provider'
 import ReactQueryProvider from '@/components/providers/react-query-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { Toaster } from '@/components/ui/sonner'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
@@ -37,11 +38,12 @@ export default async function RootLayout({
           <LocaleProvider locale={locale}>
             <ThemeProvider
               attribute="class"
-              defaultTheme="system"
+              defaultTheme="light"
               enableSystem
               disableTransitionOnChange
             >
               {children}
+              <Toaster />
             </ThemeProvider>
           </LocaleProvider>
         </ReactQueryProvider>
