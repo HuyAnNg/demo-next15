@@ -1,11 +1,14 @@
-import { Button } from '@/components/ui/button'
+import { auth } from '@/auth'
+import { redirect } from 'next/navigation'
 
 const Page = () => {
-  return (
-    <div>
-      <Button>Hello Shadcn</Button>
-    </div>
-  )
+  const session = auth()
+
+  if (!session) {
+    redirect('/login')
+  }
+
+  redirect('/dashboard')
 }
 
 export default Page

@@ -1,6 +1,5 @@
 'use client'
 
-import * as React from 'react'
 import {
   ArrowUpCircleIcon,
   BarChartIcon,
@@ -18,11 +17,8 @@ import {
   SettingsIcon,
   UsersIcon,
 } from 'lucide-react'
+import * as React from 'react'
 
-import { NavDocuments } from '@/components/nav-documents'
-import { NavMain } from '@/components/nav-main'
-import { NavSecondary } from '@/components/nav-secondary'
-import { NavUser } from '@/components/nav-user'
 import {
   Sidebar,
   SidebarContent,
@@ -32,12 +28,16 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
+import { NavDocuments } from './nav-documents'
+import { NavMain } from './nav-main'
+import { NavSecondary } from './nav-secondary'
+import { NavUser } from './nav-user'
 
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
+    name: 'Admin',
+    email: 'admin@goonus.io',
+    avatar: '/onus_avatar.png',
   },
   navMain: [
     {
@@ -162,7 +162,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">Onus</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>

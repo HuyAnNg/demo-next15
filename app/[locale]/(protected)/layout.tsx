@@ -1,6 +1,7 @@
 import { auth } from '@/auth'
 import { AppSidebar } from '@/components/sidebar/app-sidebar'
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+import { SiteHeader } from '@/components/sidebar/site-header'
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import React from 'react'
@@ -16,11 +17,11 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
 
   return (
     <SidebarProvider defaultOpen={defaultOpen}>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <SiteHeader />
         {children}
-      </main>
+      </SidebarInset>
     </SidebarProvider>
   )
 }
