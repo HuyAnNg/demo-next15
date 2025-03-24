@@ -25,17 +25,11 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar'
 import { signOut } from 'next-auth/react'
+import { mockUser } from './configs'
 
-export function NavUser({
-  user,
-}: {
-  user: {
-    name: string
-    email: string
-    avatar: string
-  }
-}) {
+export function NavUser() {
   const { isMobile } = useSidebar()
+  const user = mockUser
 
   return (
     <SidebarMenu>
