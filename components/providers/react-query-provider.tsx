@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  defaultShouldDehydrateQuery,
   isServer,
   QueryClient,
   QueryClientProvider,
@@ -13,6 +14,14 @@ function makeQueryClient() {
         staleTime: 60 * 1000,
         refetchOnWindowFocus: false,
         retry: false,
+      },
+      dehydrate: {
+        shouldDehydrateQuery: (query) =>
+          defaultShouldDehydrateQuery(query) ||
+          query.state.status === 'pending',
+        shouldRedactErrors: () => {
+          return false
+        },
       },
     },
   })
