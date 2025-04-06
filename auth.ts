@@ -1,35 +1,27 @@
-import NextAuth, { CredentialsSignin } from 'next-auth'
-import Credentials from 'next-auth/providers/credentials'
-import { getUserByEmailAndPassword } from './lib/auth/api'
+import NextAuth from 'next-auth'
+import authConfig from './lib/auth/auth.config'
 
-class InvalidLoginError extends CredentialsSignin {
-  constructor(code: string) {
-    super()
-    this.code = code
+declare module 'next-auth' {
+  interface Session {
+    accessToken?: string
   }
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  providers: [
-    Credentials({
-      credentials: {
-        email: {},
-        password: {},
-      },
-      authorize: async (credentials) => {
-        try {
-          let user = null
-
-          user = await getUserByEmailAndPassword(
-            credentials.email as string,
-            credentials.password as string,
-          )
-
-          return user
-        } catch (error) {
-          throw new InvalidLoginError('500')
-        }
-      },
-    }),
-  ],
+  session: {
+    strategy: 'jwt',
+  },
+  callbacks: {
+    jwt: async ({ token, account }) => {
+      if (account) {
+        token.accessToken = account.accessToken
+      }
+      return token
+    },
+    session: async ({ session, token }) => {
+      session.accessToken = token.accessToken as string
+      return session
+    },
+  },
+  ...authConfig,
 })
