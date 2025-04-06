@@ -10,6 +10,7 @@ export const getUserByEmailAndPassword = async (
   if (email === FAKE_ADMIN.email && password === FAKE_ADMIN.password) {
     return {
       email: FAKE_ADMIN.email,
+      accessToken: 'ACCESS_TOKEN',
     }
   }
 

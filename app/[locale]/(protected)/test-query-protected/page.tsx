@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getPosts } from './api'
 
 const Page = () => {
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ['jsonPlaceholder'],
     queryFn: getPosts,
   })
@@ -14,6 +14,7 @@ const Page = () => {
   }
 
   if (isError) {
+    console.log('error', error)
     return <div>Error</div>
   }
 
