@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
       fullUrl: true,
     },
   },
+  output: 'standalone',
+  reactStrictMode: false,
 }
 
 export default nextConfig
