@@ -11,6 +11,7 @@ async function fetcher<TBody = Record<string, unknown>>({
   body,
   headers = {},
   hasAccessToken = true,
+  ...other
 }: FetcherOptions<TBody>): Promise<Response> {
   const url = getUrl({
     baseUrl,
@@ -30,6 +31,7 @@ async function fetcher<TBody = Record<string, unknown>>({
       ...headers,
     },
     body: hasBody ? JSON.stringify(body) : undefined,
+    ...other,
   })
 
   if (response.status === 401) {

@@ -14,4 +14,6 @@ export interface FetcherOptions<TBody = Record<string, unknown>>
   body?: TBody
   headers?: Record<string, string>
   hasAccessToken?: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any
 }
