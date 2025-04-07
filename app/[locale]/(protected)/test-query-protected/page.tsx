@@ -1,10 +1,10 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import { getPosts } from './api'
+import { getPosts } from './action'
 
 const Page = () => {
-  const { data, isLoading, isError, error } = useQuery({
+  const { isLoading, isError, error } = useQuery({
     queryKey: ['jsonPlaceholder'],
     queryFn: getPosts,
   })
@@ -17,8 +17,6 @@ const Page = () => {
     console.log('error', error)
     return <div>Error</div>
   }
-
-  console.log('data', data)
 
   return <div>Success</div>
 }
