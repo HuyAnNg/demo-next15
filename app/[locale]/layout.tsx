@@ -1,5 +1,6 @@
 import LocaleProvider from '@/components/providers/locale-provider'
 import ReactQueryProvider from '@/components/providers/react-query-provider'
+import SessionProvider from '@/components/providers/session-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import type { Metadata } from 'next'
@@ -35,17 +36,19 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ReactQueryProvider>
-          <LocaleProvider locale={locale}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="light"
-              enableSystem
-              disableTransitionOnChange
-            >
-              {children}
-              <Toaster />
-            </ThemeProvider>
-          </LocaleProvider>
+          <SessionProvider>
+            <LocaleProvider locale={locale}>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="light"
+                enableSystem
+                disableTransitionOnChange
+              >
+                {children}
+                <Toaster />
+              </ThemeProvider>
+            </LocaleProvider>
+          </SessionProvider>
         </ReactQueryProvider>
       </body>
     </html>

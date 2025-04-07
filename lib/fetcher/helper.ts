@@ -1,3 +1,5 @@
+import { signOut } from '@/auth'
+import { signOut as signOutClient } from 'next-auth/react'
 import { GetUrlOptions } from './type'
 
 export const getUrl = ({
@@ -16,4 +18,12 @@ export const getUrl = ({
   })
 
   return url.toString()
+}
+
+export const handleSignOut = async () => {
+  if (typeof window === 'undefined') {
+    await signOut()
+  } else {
+    signOutClient()
+  }
 }

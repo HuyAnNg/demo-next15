@@ -2,6 +2,12 @@ import NextAuth from 'next-auth'
 import authConfig from './lib/auth/auth.config'
 
 declare module 'next-auth' {
+  interface User {
+    accessToken?: string
+  }
+}
+
+declare module 'next-auth' {
   interface Session {
     accessToken?: string
   }
@@ -12,9 +18,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     strategy: 'jwt',
   },
   callbacks: {
-    jwt: async ({ token, account }) => {
-      if (account) {
-        token.accessToken = account.accessToken
+    jwt: async ({ token, user }) => {
+      if (user) {
+        token.accessToken = user.accessToken
       }
       return token
     },

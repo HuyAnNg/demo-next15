@@ -1,7 +1,6 @@
-import { signOut } from '@/auth'
 import { getAuthorizationHeader } from './action'
 import { defaultHeaders } from './configs'
-import { getUrl } from './helper'
+import { getUrl, handleSignOut } from './helper'
 import { FetcherOptions } from './type'
 
 async function fetcher<TBody = Record<string, unknown>>({
@@ -34,7 +33,7 @@ async function fetcher<TBody = Record<string, unknown>>({
   })
 
   if (response.status === 401) {
-    await signOut()
+    await handleSignOut()
   }
 
   return response
