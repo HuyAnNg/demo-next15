@@ -5,6 +5,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Project uses kebab-case for file and folder name for SEO and case-sensitive/case-insensitive OS (see more: https://nextjs-faq.com/module-not-found-due-to-case-sensitivity)
 - Install prettier, eslint, editorconfig extension as linter
 
+## Suggestion
+- Using MCP github copilot
+
 ## Getting Started
 
 First, run the development server:
