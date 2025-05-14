@@ -9,12 +9,12 @@ export default function ErrorComponent() {
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Oops, something went wrong!
         </h1>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <div className="mt-4 text-lg text-muted-foreground">
           <p>{"We're sorry, but an unexpected error has occurred."}</p>
           <p>
             {'Please try again later or contact support if the issue persists.'}
           </p>
-        </p>
+        </div>
         <div className="mt-6">
           <Link
             href={DEFAULT_LOGIN_REDIRECT}

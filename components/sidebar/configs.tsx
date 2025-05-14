@@ -1,6 +1,7 @@
 import {
-  BarChartIcon,
+  BookText,
   CameraIcon,
+  ChartColumn,
   ClipboardListIcon,
   DatabaseIcon,
   FileCodeIcon,
@@ -8,8 +9,7 @@ import {
   FileTextIcon,
   FolderIcon,
   HelpCircleIcon,
-  LayoutDashboardIcon,
-  ListIcon,
+  Map,
   SearchIcon,
   SettingsIcon,
   UsersIcon,
@@ -18,24 +18,29 @@ import {
 export const mockUser = {
   name: 'Admin',
   email: 'admin@goonus.io',
-  avatar: '/onus_avatar.png',
+  // avatar: '/flag.png',
 }
 
 export const navMain = [
   {
     title: 'Dashboard',
-    url: '#',
-    icon: LayoutDashboardIcon,
+    url: '/dashboard',
+    icon: ChartColumn,
   },
   {
-    title: 'Lifecycle',
-    url: '#',
-    icon: ListIcon,
+    title: 'Map',
+    url: '/map',
+    icon: Map,
   },
   {
-    title: 'Analytics',
-    url: '#',
-    icon: BarChartIcon,
+    title: 'Chart',
+    url: '/chart',
+    icon: ChartColumn,
+  },
+  {
+    title: 'Form',
+    url: '/form',
+    icon: BookText,
   },
   {
     title: 'Projects',

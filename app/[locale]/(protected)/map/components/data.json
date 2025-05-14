@@ -1,0 +1,82 @@
+[
+    {
+        "key": 0,
+        "name": "Hồ Hoàn Kiếm",
+        "position": {
+            "lat": 21.0285,
+            "lng": 105.852
+        }
+    },
+    {
+        "key": 1,
+        "name": "Lăng Chủ tịch Hồ Chí Minh",
+        "position": {
+            "lat": 21.037,
+            "lng": 105.836
+        }
+    },
+    {
+        "key": 2,
+        "name": "Văn Miếu - Quốc Tử Giám",
+        "position": {
+            "lat": 21.0282,
+            "lng": 105.835
+        }
+    },
+    {
+        "key": 3,
+        "name": "Hoàng thành Thăng Long",
+        "position": {
+            "lat": 21.0356,
+            "lng": 105.840
+        }
+    },
+    {
+        "key": 4,
+        "name": "Chùa Một Cột",
+        "position": {
+            "lat": 21.0369,
+            "lng": 105.833
+        }
+    },
+    {
+        "key": 5,
+        "name": "Nhà hát lớn Hà Nội",
+        "position": {
+            "lat": 21.0243,
+            "lng": 105.857
+        }
+    },
+    {
+        "key": 6,
+        "name": "Cầu Long Biên",
+        "position": {
+            "lat": 21.0445,
+            "lng": 105.864
+        }
+    },
+    {
+        "key": 7,
+        "name": "Bảo tàng Dân tộc học Việt Nam",
+        "position": {
+            "lat": 21.0401,
+            "lng": 105.782
+        }
+    },
+    {
+        "key": 8,
+        "name": "Chùa Trấn Quốc",
+        "position": {
+            "lat": 21.0431,
+            "lng": 105.836
+        }
+    },
+    {
+        "key": 9,
+        "name": "Phố cổ Hà Nội",
+        "position": {
+            "lat": 21.035,
+            "lng": 105.853
+        }
+    }
+]

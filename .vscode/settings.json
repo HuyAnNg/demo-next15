@@ -5,7 +5,7 @@
     "source.organizeImports": "explicit",
     "source.fixAll": "explicit"
   },
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "cSpell.language": "en,vi",
