@@ -1,23 +1,24 @@
-import {
-  BookText,
-  CameraIcon,
-  ChartColumn,
-  ClipboardListIcon,
-  DatabaseIcon,
-  FileCodeIcon,
-  FileIcon,
-  FileTextIcon,
-  FolderIcon,
-  HelpCircleIcon,
-  Map,
-  SearchIcon,
-  SettingsIcon,
-  UsersIcon,
-} from 'lucide-react'
+import
+  {
+    BookText,
+    CameraIcon,
+    ChartColumn,
+    ClipboardListIcon,
+    DatabaseIcon,
+    FileCodeIcon,
+    FileIcon,
+    FileTextIcon,
+    FolderIcon,
+    HelpCircleIcon,
+    Map,
+    SearchIcon,
+    SettingsIcon,
+    UsersIcon,
+  } from 'lucide-react'
 
 export const mockUser = {
   name: 'Admin',
-  email: 'admin@goonus.io',
+  email: 'admin@gmail.com',
   // avatar: '/flag.png',
 }
 

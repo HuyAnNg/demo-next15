@@ -1,14 +1,15 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form'
+import
+  {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+  } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -81,7 +82,7 @@ export function LoginForm({
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="admin@goonus.io" {...field} />
+                <Input placeholder="admin@gmail.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -95,7 +96,7 @@ export function LoginForm({
             <FormItem>
               <FormLabel>Mật khẩu</FormLabel>
               <FormControl>
-                <Input {...field} type="password" />
+                <Input {...field} placeholder="Hello@123" type="password" />
               </FormControl>
               <FormMessage />
             </FormItem>
